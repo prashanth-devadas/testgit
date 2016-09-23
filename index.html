@@ -8,12 +8,29 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jqueryui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
     <style type="text/css">
         
+        #draggable {
+            width:200px;
+            height: 200px;
+            background-color: green;
+            color: black;
+            font-family: verdana
+        }
+
+        #resizable {
+            width:200px;
+            height: 200px;
+            background-color: red;
+            color: black;
+            font-family: verdana
+        }
     
     </style>
        
@@ -21,9 +38,15 @@
 
 <body>
 
-    
+    <div id="draggable">Drag Me around</div>
+
+    <div id="resizable">Resize Me!</div>
 
 <script type="text/javascript">
+
+    $("#draggable").draggable();
+
+    $("#resizable").resizable();
 
 </script>
 
